@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Lada</title>
+
+    <link href="Favicon@2x.png" rel="icon" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <style>
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+        #sticky {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background-color: white;
+        }
+
+
+        nav {
+            background-color: red;
+            color: white;
+            padding: 10px;
+        }
+
+        nav a {
+
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: goldenrod;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            column-gap: 30px;
+        }
+
+        .banner {
+            background-color: rgb(39, 150, 197);
+            height: 100px;
+            background-image: url(banner.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+
+        .about {
+
+            background-color: black;
+            display: flex;
+            padding: 40px 5%;
+            column-gap: 5%;
+
+
+        }
+
+        .about-img {
+            background-color: black;
+            height: 500px;
+
+        }
+
+        .about p {
+            color: white;
+            font-size: large;
+
+        }
+
+        .about h5 {
+            color: goldenrod;
+            font-family: 'pacifico';
+            curative
+        }
+
+        .about h2 {
+            color: white;
+        }
+
+        .mv {
+            display: flex;
+            column-gap: 2%;
+            background-color: black;
+            padding: 0px 15%;
+            justify-content: center;
+        }
+
+
+        .mission {
+            background-color: rgb(112, 18, 18);
+            color: white;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 0px;
+            border-bottom-left-radius: 20px;
+            margin-bottom: 3%;
+            min-height: 100px;
+            padding: 1%;
+            max-height: 150px;
+        }
+
+        .vision {
+            background-color: chocolate;
+            color: white;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            margin-bottom: 3%;
+            max-height: 150px;
+            padding: 1%;
+            min-height: 100px;
+        }
+
+        .mission h2 {
+            text-align: center;
+            font-size: large;
+
+        }
+
+        .mission p {
+            text-align: center;
+            font-size: small;
+            margin-left: 5%;
+        }
+
+        .vision h2 {
+            text-align: center;
+            font-size: larger;
+
+        }
+
+        .vision p {
+            text-align: center;
+            font-size: small;
+            margin-left: 5%;
+            margin: bottom 5px;
+            margin-top: 0;
+
+        }
+
+        .team {
+            padding: 5%;
+            background-color: whitesmoke
+        }
+
+        .team section {
+            display: flex;
+            column-gap: 2%;
+
+        }
+
+        .team img {
+            border-radius: 50%;
+        }
+
+        .team aside {
+            flex: 1;
+            text-align: center;
+            background-color: white;
+            padding: 2%;
+            height: 260px;
+            transition: height 1s;
+            overflow: hidden;
+        }
+
+        .team aside:hover {
+            height: 300px;
+        }
+
+        .team i {
+            background-color: orangered;
+            color: white;
+            padding: 10px;
+            border-radius: 50% 50% 0 0;
+        }
+
+        .info {
+            background-color: rgb(21, 21, 52);
+            color: white;
+padding: 2% 5% 2% 5% ;
+            border: none;
+            font-size: small;
+
+        }
+
+        .info div {
+            display: flex;
+            column-gap: 3%;
+
+        }
+
+        .info section {
+            flex: 1;
+
+        }
+
+        .info h4 {
+            font-family: 'Pacifico', cursive;
+            color: goldenrod;
+            padding: 1% 5%;
+        }
+
+        .info li {
+            margin-bottom: 5px;
+        }
+        .newsletter {
+            display: flex;
+            column-gap: 5px;
+            background-color:white;
+padding: 5px;
+        }
+
+        .newsletter input[type="submit"] {
+            background-color: goldenrod;
+            font-size: small;
+            border:none;
+            flex:1;
+
+        }
+        .newsletter input[type="email"] {
+            
+        
+            border:none;
+            flex:3;
+            outline: none;
+
+        }
+
+
+
+        footer {
+            background-color: rgb(21, 21, 52);
+            color: white;
+            padding: 10px 5%;
+            
+            font: size 5px;
+            border: none;
+            display: flex;
+            align-items: center;
+
+        }
+
+       
+
+
+        footer ul {
+            display: flex;
+            column-gap: 5%;
+
+        }
+
+
+        .qo {
+            display: flex;
+            column-gap: 5%px;
+            padding: 0% 2%;
+        }
+
+        .qo article {
+            flex: 1;
+
+        }
+
+        .qo summary {
+            display: flex;
+            align-items: center;
+            padding: 5% 5%;
+            column-gap: 3%;
+        }
+
+        figure img {
+            border-radius: 50%;
+            width: 100px;
+        }
+
+        .qo figure {
+
+            margin: 0
+        }
+
+        .qo aside {
+            flex: 8;
+        }
+
+        @media only screen and (max-width:600px) {
+            .about {
+
+                background-color: black;
+                display: flex;
+                padding: 40px 5%;
+                column-gap: 5%;
+                flex-direction: column-reverse;
+
+
+            }
+           
+
+        .mv {
+            display: flex;
+            column-gap: 2%;
+            background-color: black;
+            padding: 0px 15%;
+            justify-content: center;
+            flex-direction: column-reverse;
+        }
+
+    
+        
+
+        .team section {
+            display: flex;
+            column-gap: 2%;
+            flex-direction: column-reverse;
+
+        }
+
+
+            .info div {
+            display: flex;
+            flex-direction: column;
+        }.info section {
+            flex: 1;
+
+        }
+
+
+        
+
+        .qo {
+            display: flex;
+            column-gap: 5%px;
+            padding: 0% 2%;
+            flex-direction: column-reverse;
+        }
+
+        .qo summary {
+            display: flex;
+            align-items: center;
+            padding: 5% 5%;
+            column-gap: 3%;
+        }
+
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+<body>
+
+    <main id="sticky">
+        <header>
+
+            <center><a href="index.html"><img src="Lada logo@2x.png" alt="logo" height="100px"></a></center>
+        </header>
+
+        <nav>
+            <ul>
+                <a href="index.html">
+                    <li>Home</li>
+                </a>
+
+                <a href="about.html">
+                    <li>About</li>
+                </a>
+                <a href="services.html">
+                    <li>Services</li>
+                </a>
+                <a href="menu.html">
+                    <li>Menu</li>
+                </a>
+                <a href="blog.html">
+                    <li>Blog</li>
+                </a>
+                <a href="reservation.html">
+                    <li>Reservation</li>
+                </a>
+            </ul>
+        </nav>
+    </main>
+
+    <main class="banner">
+
+
+    </main>
+
+
+
+    <main class="about">
+        <section style="flex: 3;">
+            <h2> About us</h2>
+            <h5>Restaurant Eleniyan Lada</h5>
+
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt voluptatibus fuga iusto, nemo velit, quo
+                aut quasi, ab cupiditate recusandae culpa eos aliquam officiis magnam explicabo delectus illum libero
+                autem.</p>
+
+
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt voluptatibus fuga iusto, nemo velit, quo
+                aut quasi, ab cupiditate recusandae culpa eos aliquam officiis magnam explicabo delectus illum libero
+                autem.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt voluptatibus fuga iusto, nemo velit, quo
+                aut quasi, ab cupiditate recusandae culpa eos aliquam officiis magnam explicabo delectus illum libero
+                autem.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt voluptatibus fuga iusto, nemo velit, quo
+                aut quasi, ab cupiditate recusandae culpa eos aliquam officiis magnam explicabo delectus illum libero
+                autem.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt voluptatibus fuga iusto, nemo velit, quo
+                aut quasi, ab cupiditate recusandae culpa eos aliquam officiis magnam explicabo delectus illum libero
+                autem.</p>
+
+
+        </section>
+        <section class="about-img" style="flex: 2;">
+            <img src="restaurant2.jpg" width="100%"></img>
+        </section>
+
+    </main>
+
+    <div class="mv">
+        <section class="mission">
+            <h2> Our Mission</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas voluptas nobis soluta, unde a corrupti
+                recusandae aperiam iusto consequuntur eum omnis cumque maiores,</p>
+        </section>
+
+        <section class="vision">
+            <h2>Our Vision</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas voluptas nobis soluta, unde a corrupti
+                recusandae aperiam iusto consequuntur eum omnis cumque maiores,</p>
+        </section>
+    </div>
+    <main class="team">
+        <h5>Members</h5>
+        <h4> Our Master Chef</h4>
+        <section>
+            <aside>
+                <img src="chef1.jpg" width="100%">
+                <p><b> Smith Mary</b><br>
+                    Executive Chef
+                </p>
+                <article><i class="bi bi-facebook"></i>
+                    <i class="bi bi-twitter-x"></i>
+                    <i class="bi bi-instagram"></i>
+                </article>
+            </aside>
+            <aside>
+                <img src="chef2.jpg" width="100%">
+                <p><b>Joseph John</b><br>
+                    Grill Chef
+
+                </p>
+                <article><i class="bi bi-facebook"></i>
+                    <i class="bi bi-twitter-x"></i>
+                    <i class="bi bi-instagram"></i>
+                </article>
+            </aside>
+            <aside>
+                <img src="chef3.jpg" width="100%">
+                <p><b>Sulaimon Aisha</b><br>
+                    Sous Chef
+                </p>
+                <article><i class="bi bi-facebook"></i>
+                    <i class="bi bi-twitter-x"></i>
+                    <i class="bi bi-instagram"></i>
+                </article>
+            </aside>
+            <aside>
+                <img src="chef4.jpg" width="100%">
+                <p><b>James Nneka</b><br>
+                    Saucier (Saute Chef)
+                </p>
+                <article><i class="bi bi-facebook"></i>
+                    <i class="bi bi-twitter-x"></i>
+                    <i class="bi bi-instagram"></i>
+                </article>
+            </aside>
+        </section>
+
+
+
+    </main>
+    <main class="qo">
+        <article>
+            <img src="symbol/orange red@2x.png" width="30px">
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis rerum nihil placeat esse deserunt odio
+                minus sequi
+            </p>
+            <summary>
+                <figure><img src="Undegraduate-1.jpg"></figure>
+                <aside>
+                    <h4><b>Chioma George</b><br>
+                        Student
+                    </h4>
+                </aside>
+            </summary>
+        </article>
+        <article>
+            <img src="symbol/orange red@2x.png" width="30px">
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis rerum nihil placeat esse deserunt odio
+                minus sequi
+            </p>
+            <summary>
+                <figure><img src="client3.jpg"></figure>
+
+                <aside>
+                    <h4><b>Adeoye Abdullah</b><br>
+                        Doctor
+                </aside>
+                </h4>
+
+            </summary>
+        </article>
+        <article>
+            <img src="symbol/orange red@2x.png" width="30px">
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis rerum nihil placeat esse deserunt odio
+                minus sequi
+            </p>
+            <summary>
+                <figure><img src="client2.jpg"></figure>
+                <aside>
+                    <h4><b>Adeleke Damilola</b><br>
+                        Lawyer
+                    </h4>
+                </aside>
+            </summary>
+        </article>
+    </main>
+    
+    <main class="info">
+        <div>
+
+            <section>
+                <h4>company_____</h4>
+                <ul>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                    <li>Reservation</li>
+                    <li>Privacy policy</li>
+                    <li>Terms&Condition</li>
+                </ul>
+            </section>
+            <section>
+                <h4>Contact_____</h4>
+                <p>&#xf041 13,Ishola Street,Egbeda,Lagos,Nigeria</p>
+                <p>&#9742+01234567890</p>
+                <p>&#128231info@example.com</p>
+            </section>
+            <section>
+                <h4>Opening______</h4>
+                <p>Monday-Saturday</p>
+                09AM-09PM
+                <p>Sunday</p>
+                10AM-08PM
+            </section>
+
+            <section>
+                <h4>Newsletter______</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, facere atque place.</p>
+                <aside class="newsletter"><input type="email" placeholder="Your email">
+                    <input type="submit" value="SIGN UP">
+                </aside>
+            </section>
+        </div>
+
+        <hr>
+    </main>
+
+    <footer>
+
+        <h5 style=" flex: 3; margin: 0px;">All Right Reserved.Designed By Oshinkoya Masturah</h5>
+        <ul style="list-style: none; flex: 1; margin: 0px; ">
+            <li>Home</li>
+            <li>Cookies</li>
+            <li>Help</li>
+            <li>FQAS</li>
+        </ul>
+    </footer>
+
+
+
+
+</body>
+
+</html>
