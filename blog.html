@@ -48,7 +48,7 @@
 
         .banner {
             background-color: rgb(39, 150, 197);
-            height: 100px;
+            height: 150px;
             background-image: url(banner.jpg);
             background-repeat: no-repeat;
             background-size: cover;
@@ -76,18 +76,155 @@
 
         
 
-        .box {
-            display: flex;
-            padding: 50px 10%;
-            column-gap: 20px;
-        }
+        
 
-        .box section {
-            background-color: black;
-            flex: 1;
-            height: 200px;
+      .real {
+        display: flex;
+        column-gap: 10px;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 0;
 
-        }
+
+      }
+
+
+      .real input {
+        padding: 6px;
+        font-size: 18px;
+        border: cyan 1px solid;
+        outline: none;
+        box-shadow: 0px 0px 10px rgba(52, 57, 213, 0.5);
+        box-shadow: inset 0px 10px rgba(0, 0, 0, 0.);
+        width: 50%;
+      }
+      #story summary{
+        display: flex;
+        column-gap: 5%;
+        
+      }
+
+
+      #story article{
+        flex: 1;
+      }
+      #story img{
+        height: 230px;
+        object-fit: cover;
+        
+      }
+
+      #story img:hover{
+        
+        object-fit: cover;
+        object-position:top;
+      }
+
+
+      .story-footer{
+        margin-top: 50px;
+      }
+
+
+      .story-footer aside{
+        display: flex;
+        justify-content: space-between;
+      }
+#story p{
+
+  margin: 10px 0;
+}
+
+
+
+#story h3 {margin: 15px 0;
+  color: orangered;
+}
+
+
+.travel{
+  color: orangered;
+}
+
+ .bg-hr{
+height: 5px;
+width: 100%;
+background-color: rgb(222, 22, 22);
+margin: 20px 0;
+}
+.blog{
+  display: flex;
+  column-gap: 40px;
+  align-items: flex-start;
+  padding: 5%;
+}
+
+.sidebar{
+  padding: 5% 10px;
+
+}
+
+.header{
+  background-color: rgb(218, 213, 213);
+
+}
+.header P{
+  margin: 10px;
+  font-family:"Pacifico", cursive; 
+}
+
+.latest{
+  color: rgb(207, 12, 12);
+  margin-top: 10px;
+
+}
+.latest li{ list-style: square;
+  
+}
+
+.news{
+  flex: 20%;
+}
+.news li{
+color:rgb(207, 12, 12);
+  font-style: italic;
+  margin: 10px 5px;
+}
+
+.news p{
+  margin: 10px 10px;
+}
+.ad{ 
+
+background-color:rgb(230, 227, 223) ;
+padding: 30px 30px;
+
+}
+
+.ad p{
+  background-color: rgb(188, 188, 188);
+
+margin-top: 10
+}
+
+.ad img{
+        width: 100%
+        
+      }
+
+      .ad img:hover{
+        
+        object-fit: cover;
+        object-position:top;
+      }
+
+
+      
+
+
+      .a-hr {
+        border-color: yellow;
+      }
 
         .info {
             background-color: rgb(21, 21, 52);
@@ -163,7 +300,44 @@ padding: 5px;
             column-gap: 5%;
 
         }
-         @media only screen and (max-width:600px)
+         @media only screen and (max-width:600px){
+            .info div {
+                display: flex;
+                column-gap: 3%;
+                flex-direction: column-reverse;
+
+            }
+            .real {
+        display: flex;
+        column-gap: 10px;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 0;
+        flex-direction: column-reverse;
+
+
+      }
+
+      #story summary{
+        display: flex;
+        column-gap: 5%;
+        flex-direction: column-reverse;
+        
+      }
+
+      .story-footer aside{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+      }
+      .blog{
+  display: flex;
+  column-gap: 40px;
+  align-items: flex-start;
+  padding: 5%;
+  flex-direction: column-reverse;
+
+         }
 
         
     </style>
@@ -220,13 +394,485 @@ padding: 5px;
     </main>
 
     
-    <main class="box">
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
+    <main class="blog">
 
-    </main>
+<section>
+
+  <form class="real">
+    <input type="search" placeholder="search..." id="">
+    <button><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+        <path
+          d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+      </svg></button>
+
+
+  </form>
+
+  <div id="story">
+
+    <summary>
+
+      <article >
+
+        <hr class="bg-hr">
+
+        <aside>
+          <img src="cooking1.jpg" width="100%">
+
+        </aside>
+
+        <h3>How To Cook Without Ingredient</h3>
+
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium consectetur a eveniet rerum,
+          similique voluptas debitis repudiandae voluptatem odio molestias, deleniti, quia iure expedita cum.
+          Aspernatur odio praesentium ipsum nostrum.</p>
+
+
+        <div class="story-footer">
+
+          <aside class="travel">
+            <p>Travel. Event</p>
+            <p>12 June, 2024</p>
+
+          </aside>
+          <hr class="sm-hr">
+          <aside>
+            <p>36 Comment</p>
+            <p>Admin Masturah</p>
+          </aside>
+
+
+        </div>
+
+
+
+      </article>
+
+
+
+      <article>
+
+        <hr class="bg-hr">
+
+        <aside>
+          <img src="cooking2.jpeg" width="100%">
+
+        </aside>
+
+        <h3>How To Cook Without Ingredient</h3>
+
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium consectetur a eveniet rerum,
+          similique voluptas debitis repudiandae voluptatem odio molestias, deleniti, quia iure expedita cum.
+          Aspernatur odio praesentium ipsum nostrum.</p>
+
+
+        <div class="story-footer">
+
+          <aside class="travel">
+            <p>Travel. Event</p>
+            <p>12 June, 2024</p>
+
+          </aside>
+          <hr class="sm-hr">
+          <aside>
+            <p>36 Comment</p>
+            <p>Admin Masturah</p>
+          </aside>
+
+
+        </div>
+
+
+
+      </article>
+
+
+
+
+
+
+    </summary>
+
+
+    
+    <summary>
+
+      <article >
+
+        <hr class="bg-hr">
+
+        <aside>
+          <img src="cooking3.jpeg" width="100%">
+
+        </aside>
+
+        <h3>How To Cook Without Ingredient</h3>
+
+        
+
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium consectetur a eveniet rerum,
+          similique voluptas debitis repudiandae voluptatem odio molestias, deleniti, quia iure expedita cum.
+          Aspernatur odio praesentium ipsum nostrum.</p>
+
+
+
+
+        <div class="story-footer">
+
+          <aside class="travel">
+            <p>Travel. Event</p>
+            <p>12 June, 2024</p>
+
+          </aside>
+          <hr class="sm-hr">
+          <aside>
+            <p>36 Comment</p>
+            <p>Admin Masturah</p>
+          </aside>
+
+
+        </div>
+
+
+
+      </article>
+
+
+
+      <article>
+
+        <hr class="bg-hr">
+
+        <aside>
+          <img src="blog2.avif" width="100%">
+
+        </aside>
+
+        <h3>How To Cook Without Ingredient</h3>
+
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium consectetur a eveniet rerum,
+          similique voluptas debitis repudiandae voluptatem odio molestias, deleniti, quia iure expedita cum.
+          Aspernatur odio praesentium ipsum nostrum.</p>
+
+
+        <div class="story-footer">
+
+          <aside class="travel">
+            <p>Travel. Event</p>
+            <p>12 June, 2024</p>
+
+          </aside>
+          <hr class="sm-hr">
+          <aside>
+            <p>36 Comment</p>
+            <p>Admin Masturah</p>
+          </aside>
+
+
+        </div>
+
+
+
+      </article>
+
+
+
+
+
+
+    </summary>
+
+
+
+    
+    <summary>
+
+      <article >
+
+        <hr class="bg-hr">
+
+        <aside>
+          <img src="cooking5.jpeg" width="100%">
+
+        </aside>
+
+        <h3>How To Cook Without Ingredient</h3>
+
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium consectetur a eveniet rerum,
+          similique voluptas debitis repudiandae voluptatem odio molestias, deleniti, quia iure expedita cum.
+          Aspernatur odio praesentium ipsum nostrum.</p>
+
+
+        <div class="story-footer">
+
+          <aside class="travel">
+            <p>Travel. Event</p>
+            <p>12 June, 2024</p>
+
+          </aside>
+          <hr class="sm-hr">
+          <aside>
+            <p>36 Comment</p>
+            <p>Admin Masturah</p>
+          </aside>
+
+
+        </div>
+
+
+
+      </article>
+
+
+
+      <article>
+
+        <hr class="bg-hr">
+
+        <aside>
+          <img src="cooking6.jpeg" width="100%">
+
+        </aside>
+
+        <h3>How To Cook Without Ingredient</h3>
+
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium consectetur a eveniet rerum,
+          similique voluptas debitis repudiandae voluptatem odio molestias, deleniti, quia iure expedita cum.
+          Aspernatur odio praesentium ipsum nostrum.</p>
+
+
+        <div class="story-footer">
+
+          <aside class="travel">
+            <p>Travel. Event</p>
+            <p>12 June, 2024</p>
+
+          </aside>
+          <hr class="sm-hr">
+          <aside>
+            <p>36 Comment</p>
+            <p>Admin Masturah</p>
+          </aside>
+
+
+        </div>
+
+
+
+      </article>
+
+
+
+
+
+
+    </summary>
+
+
+    
+    <summary>
+
+      <article >
+
+        <hr class="bg-hr">
+
+        <aside>
+          <img src="cooking7.jpeg" width="100%">
+
+        </aside>
+
+        <h3>How To Cook Without Ingredient</h3>
+
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium consectetur a eveniet rerum,
+          similique voluptas debitis repudiandae voluptatem odio molestias, deleniti, quia iure expedita cum.
+          Aspernatur odio praesentium ipsum nostrum.</p>
+
+
+        <div class="story-footer">
+
+          <aside class="travel">
+            <p>Travel. Event</p>
+            <p>12 June, 2024</p>
+
+          </aside>
+          <hr class="sm-hr">
+          <aside>
+            <p>36 Comment</p>
+            <p>Admin Masturah</p>
+          </aside>
+
+
+        </div>
+
+
+
+      </article>
+
+
+
+      <article>
+
+        <hr class="bg-hr">
+
+        <aside>
+          <img src="cooking8.webp" width="100%">
+
+        </aside>
+
+        <h3>How To Cook Without Ingredient</h3>
+
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium consectetur a eveniet rerum,
+          similique voluptas debitis repudiandae voluptatem odio molestias, deleniti, quia iure expedita cum.
+          Aspernatur odio praesentium ipsum nostrum.</p>
+
+
+        <div class="story-footer">
+
+          <aside class="travel">
+            <p>Travel. Event</p>
+            <p>12 June, 2024</p>
+
+          </aside>
+          <hr class="sm-hr">
+          <aside>
+            <p>36 Comment</p>
+            <p>Admin Masturah</p>
+          </aside>
+
+
+        </div>
+
+
+
+      </article>
+
+
+
+
+
+
+    </summary>
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+</section>
+
+
+<aside class="sidebar">
+
+
+  <div class="header">
+
+
+  <p>
+    Claim and optimize your business on WHATSAPP.</p>
+    
+    <p>This ensures accurate information about your business appears in local search results.</p> 
+</div>
+
+<div class="latest">
+
+<h3><li> Latest News</li></h3>
+<hr>
+</div>
+
+
+<section class="news">
+
+<div>
+<h6><li>1 hour ago</li></h6>
+
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. iure odit eveniet voluptatum .</p>
+
+</div>
+<div>
+<hr>
+<h6><li>2 hours ago</li></h6>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. iure odit eveniet voluptatum .</p>
+
+</div>
+
+<div>
+<hr>
+<h6><li>3 hours ago</li></h6>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. iure odit eveniet voluptatum .</p>
+
+</div>
+
+<div>
+<hr>
+<h6><li>4 hours ago</li></h6>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. iure odit eveniet voluptatum .</p>
+
+</div>
+
+<div>
+<hr>
+<h6><li>5 hours ago</li></h6>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. iure odit eveniet voluptatum .</p>
+
+</div>
+
+
+<div>
+<hr>
+<h6><li>6 hours ago</li></h6>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. iure odit eveniet voluptatum .</p>
+
+</div>
+
+<div>
+<hr>
+<h6><li>7 hours ago</li></h6>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. iure odit eveniet voluptatum .</p>
+
+</div>
+
+</section>
+<div class="ad">
+
+<article>
+<p>Advertisement</p>
+<img src="advert1.jpg">
+
+</article>
+
+<p>Advertisement</p>
+<img src="advert2.jpeg">
+
+</article>
+
+<p>Advertisement</p>
+<img src="advert3.jpeg">
+
+</article>
+
+<article>
+
+<p>Advertisement</p>
+<img src="advert4.jpeg">
+
+</article>
+
+</div>
+</aside>
+
+
+
+
+</main>
+
 
     <main class="info">
         <div>
@@ -269,7 +915,7 @@ padding: 5px;
 
     <footer>
 
-        <h5 style=" flex: 3; margin: 0px;">All Right Reserved.Designed By Oshinkoya Masturah</h5>
+        <h5 style =" flex: 3; margin: 0px;">All Right Reserved.Designed By Oshinkoya Masturah</h5>
         <ul style="list-style: none; flex: 1; margin: 0px; ">
             <li>Home</li>
             <li>Cookies</li>
