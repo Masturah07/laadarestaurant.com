@@ -5,46 +5,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Lada</title>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="Favicon@2x.png" rel="icon" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <style>
 
-        #sticky{
-            
-            position: sticky;
-            top: 0;
-            z-index: 10;
-            background-color: white;
-        }
+#sticky {
+
+position: sticky;
+top: 0;
+z-index: 10;
+background-color: white;
+}
+
+header {
+
+display: flex;
+justify-content: space-around;
+align-items: center;
+
+}
+
+nav {
+background-color: red;
+color: white;
+padding: 10px;
+}
+
+nav a {
+
+color: white;
+text-decoration: none;
+font-weight: bold;
+text-transform: uppercase;
+}
+
+nav a:hover {
+color: goldenrod;
+}
+
+nav ul {
+list-style: none;
+display: flex;
+justify-content: center;
+column-gap: 30px;
+}
+
+.menu-icon {
+font-size: 50px;
+cursor: pointer;
+display: none;
+
+}
+
+.menu-icon i {
+transition: all 0.3s ease-in-out;
+display: none;
+
+}
+
+.menu-icon i.fa-bars {
+display: inline;
+
+}
+
+.menu-icon i.fa-times {
+display: none;
+
+}
 
 
-        
-        nav {
-            background-color: red;
-            color: white;
-            padding: 10px;
-        }
+.mobile-menu {
+background-color: white;
+padding: 20px;
+display: none;
+position: absolute;
+top: 60px;
+left: 0;
+right: 0;
+z-index: 99999;
+}
 
-        nav a {
 
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-        nav a:hover{
-            color: goldenrod;
-        }
+.mobile-menu ul {
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+flex-direction: column;
+}
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            column-gap: 30px;
-        }
+
+.mobile-menu a {
+color: rgb(255, 255, 255);
+text-decoration: none;
+padding: 10px 0;
+display: block;
+}
 
         .banner {
             background-color: rgb(39, 150, 197);
@@ -339,7 +398,47 @@ padding: 5px;
 
          }
 
-        
+         nav {
+                display: none;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            .menu-icon.active i.fa-bars {
+                display: none;
+            }
+
+            .menu-icon.active i.fa-times {
+                display: block;
+            }
+
+            .mobile-menu {
+                display: none;
+                position: absolute;
+                top: 100px;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                z-index: 99999;
+                background-color: black;
+               
+            }
+
+            .mobile-menu ul {
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+                margin: 0;
+                list-style: none;
+            }
+
+            .mobile-menu.active {
+                display: flex;
+            }
+
+        }  
     </style>
 
 
@@ -357,9 +456,38 @@ padding: 5px;
 
 <body>
 <main id="sticky">
+  
     <header>
 
-        <center><a href="index.html"><img src="Lada logo@2x.png" alt="logo" height="100px"></a></center>
+        <a href="index.html"><img src="Lada logo@2x.png" alt="logo" height="100px"></a>
+        <div class="menu-icon" id="menu-icon">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+
+        <div class="mobile-menu" id="mobile-menu">
+            <ul>
+                <a href="index.html">
+                    <li>Home</li>
+                </a>
+
+                <a href="about.html">
+                    <li>About</li>
+                </a>
+                <a href="services.html">
+                    <li>Services</li>
+                </a>
+                <a href="menu.html">
+                    <li>Menu</li>
+                </a>
+                <a href="blog.html">
+                    <li>Blog</li>
+                </a>
+                <a href="reservation.html">
+                    <li>Reservation</li>
+                </a>
+            </ul>
+        </div>
     </header>
 
     <nav>
@@ -924,7 +1052,17 @@ padding: 5px;
         </ul>
     </footer>
 
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const nav = document.getElementById('mobile-menu');
 
+        menuIcon.addEventListener('click', () => {
+            menuIcon.classList.toggle('active');
+            nav.classList.toggle('active');
+        });
+
+
+    </script>
 </body>
 
 </html>
